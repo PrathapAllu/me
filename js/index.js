@@ -91,6 +91,15 @@ function displaySection(link,section) {
     };
 }
 
+document.querySelector('#about-me-section a').onclick = (e) => {
+    e.preventDefault();
+    document.getElementById('pdfModal').style.display = 'block';
+  }
+
+  document.querySelector('.close').onclick = () => {
+    document.getElementById('pdfModal').style.display = 'none';
+  }
+
 // dark and light mode 
 document.documentElement.style.setProperty('--background-color', '#fafafa');
 function switchDarkLightMode() {

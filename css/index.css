@@ -165,13 +165,16 @@ section {
 #name {
   animation-name: name;
   font-weight: bold;
+  font-size:6em;
   font-family: "poppins", helvetica, arial;
   animation-duration: 1.7s;
   animation-timing-function: ease-out;
   color: var(--text-title-color);
+  cursor: pointer;
 }
 
 #slogan {
+  margin-top: 1em;
   animation-name: slogan;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
@@ -188,7 +191,7 @@ section {
   animation-name: menu;
   animation-duration: 0.8s;
   animation-timing-function: ease-out;
-  margin-top: 10em;
+  margin-top: 5em;
 }
 
 #menu a {
@@ -231,11 +234,11 @@ section h2 {
   font-size: 1.2em;
   width: 900px;
   opacity: 1.0;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #about-me-intro-section p {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #about-me-intro-section a {
@@ -243,12 +246,11 @@ section h2 {
   color: var(--text-hover-color);
   background-color: var(--light-accent-color);
   box-shadow: 0px 0px 0px 0px;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.0em;
   transition: all 0.4s;
 }
 #about-me-intro-section a:hover {
   background-color: var(--text-hover-color);
-  font-size: 1em;
   color: var(--background-color);
 }
 
@@ -573,4 +575,33 @@ footer {
   border: 2px solid var(--text-color);
   color: var(--text-hover-color);
   background-color: var(--light-accent-color);
+}
+
+#about-me-intro-section span {
+  display: inline-block;
+  font-size: 1.5em;
+  animation: wave 1s infinite;
+  transform-origin: 70% 70%;
+}
+
+#about-me-intro-section p {
+  font-size: 1.2em;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

@@ -112,7 +112,6 @@ function switchDarkLightMode() {
     let darkTextHoverColor = "#ddd";
     let darkAccentColor = "#222";
     icon.onmouseover = () => {
-        console.log("James");
         icon.setAttribute("src","images/moon-full.svg");
     }
     icon.onmouseout = () => {
